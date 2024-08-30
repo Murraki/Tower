@@ -1,0 +1,37 @@
+{
+  "monsters": [
+    {
+      "id": 1,
+      "name": "Goblin Warrior",
+      "race": "GOBLIN",
+      "maxHp": 50,
+      "damage": 10,
+      "defense": 5,
+      "level": 1,
+      "dropChance": 30,
+      "skillPoint": 1
+    },
+    {
+      "id": 2,
+      "name": "Orc Warrior",
+      "race": "ORC",
+      "maxHp": 100,
+      "damage": 20,
+      "defense": 10,
+      "level": 3,
+      "dropChance": 50,
+      "skillPoint": 3
+    },
+    {
+      "id": 3,
+      "name": "Black Dragon",
+      "race": "DRAGON",
+      "maxHp": 500,
+      "damage": 50,
+      "defense": 30,
+      "level": 10,
+      "dropChance": 80,
+      "skillPoint": 10
+    }
+  ]
+}
