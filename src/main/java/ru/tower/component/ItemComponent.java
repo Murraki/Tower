@@ -1,72 +1,33 @@
 package ru.tower.component;
 
-
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import ru.tower.data.ItemData;
+import ru.tower.enums.ItemType;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Setter
-@Getter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ItemComponent {
 
-    private int id;
-    private String name;
-    private int attack;
-    private int defense;
-    private int magicAttack;
-    private int magicDefense;
-    private int criticalChance;
-    private int criticalDamage;
+    private ItemData itemData;
+
     private boolean isEquip;
     private boolean isUse;
-    private int price;
-    private int weight;
-    private String description;
-    private int healAmount;
-    private int manaAmount;
 
-    @Getter
-    public List<ItemComponent> items = new ArrayList<>();
-
-    public ItemComponent(int id, String name, int attack, int defense, int magicAttack, int magicDefense, int criticalChance, int criticalDamage, boolean isEquip, boolean isUse, int price, int weight, String description, int healAmount, int manaAmount, List<ItemComponent> items) {
-        this.id = id;
-        this.name = name;
-        this.attack = attack;
-        this.defense = defense;
-        this.magicAttack = magicAttack;
-        this.magicDefense = magicDefense;
-        this.criticalChance = criticalChance;
-        this.criticalDamage = criticalDamage;
-        this.isEquip = isEquip;
-        this.isUse = isUse;
-        this.price = price;
-        this.weight = weight;
-        this.description = description;
-        this.healAmount = healAmount;
-        this.manaAmount = manaAmount;
-        this.items = items;
+    public ItemComponent(ItemData data) {
+        this.itemData = data;
     }
 
-    public void addItem(ItemComponent item) {
-        items.add(item);
+    public void scaleToFloor(int floorNumber) {
+        double scaleFactor = 1 + (floorNumber * 0.05);
+        if (itemData.getAttackBonus() > 0) {
+            itemData.setAttackBonus((int)(itemData.getAttackBonus() * scaleFactor));
+        }
+        if (itemData.getDefenseBonus() > 0) {
+            itemData.setDefenseBonus((int)(itemData.getDefenseBonus() * scaleFactor));
+        }
     }
-
-    public boolean isEquip() {
-        return isEquip;
-    }
-
-    public boolean isUse() {
-        return isUse;
-    }
-
-    public void setEquip(boolean equip) {
-        isEquip = equip;
-    }
-
-    public void setUse(boolean use) {
-        isUse = use;
-    }
-
 }

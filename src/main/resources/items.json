@@ -1,0 +1,241 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Меч героя",
+      "type": "WEAPON",
+      "attack": 20,
+      "defense": 0
+    },
+    {
+      "id": 2,
+      "name": "Стальная броня",
+      "type": "ARMOR",
+      "attack": 0,
+      "defense": 25
+    },
+    {
+      "id": 3,
+      "name": "Большое зелье здоровья",
+      "type": "CONSUMABLE",
+      "healAmount": 100
+    },
+    {
+      "id": 4,
+      "name": "Большое зелье маны",
+      "type": "CONSUMABLE",
+      "manaAmount": 100
+    },
+    {
+      "id": 5,
+      "name": "Зелье отката времени",
+      "type": "CONSUMABLE",
+      "effect": "REWIND_TIME"
+    },
+    {
+      "id": 6,
+      "name": "Кольцо мудрости",
+      "type": "ACCESSORY",
+      "intelligence": 10
+    },
+    {
+      "id": 7,
+      "name": "Амулет удачи",
+      "type": "ACCESSORY",
+      "luck": 15
+    },
+    {
+      "id": 8,
+      "name": "Двуручный топор",
+      "type": "WEAPON",
+      "attack": 30,
+      "defense": -5
+    },
+    {
+      "id": 9,
+      "name": "Эльфийский лук",
+      "type": "WEAPON",
+      "attack": 25,
+      "speed": 10
+    },
+    {
+      "id": 10,
+      "name": "Магический посох",
+      "type": "WEAPON",
+      "magicAttack": 35
+    },
+    {
+      "id": 11,
+      "name": "Щит дракона",
+      "type": "ARMOR",
+      "defense": 30,
+      "fireResistance": 20
+    },
+    {
+      "id": 12,
+      "name": "Сапоги скорости",
+      "type": "ARMOR",
+      "defense": 5,
+      "speed": 20
+    },
+    {
+      "id": 13,
+      "name": "Шлем мудрости",
+      "type": "ARMOR",
+      "defense": 15,
+      "intelligence": 10
+    },
+    {
+      "id": 14,
+      "name": "Перчатки силы",
+      "type": "ARMOR",
+      "attack": 10,
+      "defense": 5
+    },
+    {
+      "id": 15,
+      "name": "Плащ невидимости",
+      "type": "ARMOR",
+      "defense": 10,
+      "stealth": 30
+    },
+    {
+      "id": 16,
+      "name": "Зелье силы",
+      "type": "CONSUMABLE",
+      "strengthBoost": 20,
+      "duration": 60
+    },
+    {
+      "id": 17,
+      "name": "Свиток телепортации",
+      "type": "CONSUMABLE",
+      "effect": "TELEPORT"
+    },
+    {
+      "id": 18,
+      "name": "Бомба",
+      "type": "CONSUMABLE",
+      "damage": 50,
+      "areaEffect": true
+    },
+    {
+      "id": 19,
+      "name": "Зелье сопротивления яду",
+      "type": "CONSUMABLE",
+      "poisonResistance": 100,
+      "duration": 300
+    },
+    {
+      "id": 20,
+      "name": "Кольцо регенерации",
+      "type": "ACCESSORY",
+      "healthRegen": 2
+    },
+    {
+      "id": 21,
+      "name": "Амулет стихий",
+      "type": "ACCESSORY",
+      "elementalResistance": 15
+    },
+    {
+      "id": 22,
+      "name": "Зелье невидимости",
+      "type": "CONSUMABLE",
+      "effect": "INVISIBILITY",
+      "duration": 60
+    },
+    {
+      "id": 23,
+      "name": "Свиток воскрешения",
+      "type": "CONSUMABLE",
+      "effect": "REVIVE"
+    },
+    {
+      "id": 24,
+      "name": "Кинжал убийцы",
+      "type": "WEAPON",
+      "attack": 15,
+      "criticalChance": 20
+    },
+    {
+      "id": 25,
+      "name": "Посох лечения",
+      "type": "WEAPON",
+      "magicAttack": 20,
+      "healPower": 15
+    },
+    {
+      "id": 26,
+      "name": "Зелье берсерка",
+      "type": "CONSUMABLE",
+      "attackBoost": 50,
+      "defenseReduction": 25,
+      "duration": 30
+    },
+    {
+      "id": 27,
+      "name": "Кольцо вампиризма",
+      "type": "ACCESSORY",
+      "lifeSteal": 10
+    },
+    {
+      "id": 28,
+      "name": "Плащ огня",
+      "type": "ARMOR",
+      "defense": 15,
+      "fireDamage": 10
+    },
+    {
+      "id": 29,
+      "name": "Ледяной шар",
+      "type": "CONSUMABLE",
+      "damage": 30,
+      "freezeChance": 50
+    },
+    {
+      "id": 30,
+      "name": "Меч новичка",
+      "type": "WEAPON",
+      "attack": 10,
+      "defense": 0
+    },
+    {
+      "id": 31,
+      "name": "Кожаная броня",
+      "type": "ARMOR",
+      "attack": 0,
+      "defense": 10
+    },
+    {
+      "id": 32,
+      "name": "Зелье здоровья",
+      "type": "CONSUMABLE",
+      "healAmount": 50
+    },
+    {
+      "id": 33,
+      "name": "Зелье маны",
+      "type": "CONSUMABLE",
+      "manaAmount": 50
+    },
+    {
+      "id": 34,
+      "name": "Зелье отката времени",
+      "type": "CONSUMABLE",
+      "effect": "REWIND_TIME"
+    },
+    {
+      "id": 35,
+      "name": "Кольцо силы",
+      "type": "ACCESSORY",
+      "attack": 5
+    },
+    {
+      "id": 36,
+      "name": "Амулет защиты",
+      "type": "ACCESSORY",
+      "defense": 5
+    }
+  ]
+}

@@ -1,37 +1,47 @@
 package ru.tower.loader;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import lombok.Getter;
-import lombok.Setter;
-import ru.tower.component.MonsterComponent;
+import ru.tower.data.MonsterData;
 
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MonsterLoader {
 
-    public static List<MonsterComponent> loadMonstersFromJson() {
-        InputStream inputStream = MonsterLoader.class.getClassLoader().getResourceAsStream("monsters.json");
-        if (inputStream == null) {
-            throw new IllegalArgumentException("file not found!");
-        }
-        ObjectMapper objectMapper = new ObjectMapper();
-        try {
-            // Читаем JSON-файл и преобразуем его в объект Java
-            MonstersWrapper wrapper = objectMapper.readValue(inputStream, MonstersWrapper.class);
-            return wrapper.getMonsters();
+    @Getter(lazy = true)
+    private static final MonsterLoader instance = new MonsterLoader();
+
+    private static List<MonsterData> monsters;
+
+    static {
+        loadMonstersFromJson();
+    }
+
+    private static void loadMonstersFromJson() {
+
+        try (FileReader reader = new FileReader("monsters.json")) {
+            Type monsterListType = new TypeToken<List<MonsterData>>(){}.getType();
+            monsters = new Gson().fromJson(reader, monsterListType);
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
         }
     }
 
-    // Вспомогательный класс для обертки списка монстров
-    @Setter
-    @Getter
-    private static class MonstersWrapper {
-        private List<MonsterComponent> monsters;
+    public static MonsterData getRandomMonsterForFloor(int floorNumber) {
+        List<MonsterData> suitableMonsters = monsters.stream()
+                .filter(m -> m.getLevel() <= floorNumber)
+                .collect(Collectors.toList());
 
+        if (suitableMonsters.isEmpty()) {
+            return monsters.get(0);
+        }
+
+        int randomIndex = (int) (Math.random() * suitableMonsters.size());
+        return suitableMonsters.get(randomIndex);
     }
 }

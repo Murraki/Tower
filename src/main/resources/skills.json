@@ -1,0 +1,29 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "Мощный удар",
+      "description": "Наносит увеличенный урон противнику",
+      "damageMultiplier": 1.5,
+      "manaCost": 20,
+      "cooldown": 3
+    },
+    {
+      "id": 2,
+      "name": "Защитная стойка",
+      "description": "Увеличивает защиту на несколько ходов",
+      "defenseBoost": 10,
+      "duration": 3,
+      "manaCost": 15,
+      "cooldown": 5
+    },
+    {
+      "id": 3,
+      "name": "Быстрое восстановление",
+      "description": "Восстанавливает часть здоровья",
+      "healAmount": 30,
+      "manaCost": 25,
+      "cooldown": 4
+    }
+  ]
+}
